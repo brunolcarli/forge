@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  forge:
+    build:
+        context: "."
+    image: forge_api:devel
+    restart: on-failure
+    container_name: forge_api_container
+    command: make run_service
+    env_file: forge/environment/forge.env
+    volumes:
+      - .:/app
+      - static_data:/app/static
+    ports:
+      - 15000:15000
+
+volumes:
+  static_data:

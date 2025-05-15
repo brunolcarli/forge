@@ -7,3 +7,7 @@ run:
 migrate:
 	python3 manage.py makemigrations
 	python3 manage.py migrate
+
+run_service:
+	make migrate
+	make run
