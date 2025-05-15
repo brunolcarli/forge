@@ -149,3 +149,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GRAPHENE = {
     'SCHEMA': 'forge.schema.schema',
 }
+
+PUMP_API_KEY = os.environ.get('PUMP_API_KEY')
+OPENAI_SECRET = os.environ.get('OPENAI_SECRET')
